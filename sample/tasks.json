@@ -1,0 +1,17 @@
+{
+  "budget": 1,
+  "task_error_code": "E_NO_TASK",
+  "done_error_code": "E_DUP_DONE",
+  "ready_error_code": "E_NOT_READY",
+  "event_error_code": "E_BAD_EVENT",
+  "state": {
+    "indeg": [["t1", 0], ["t2", 1], ["t3", 1], ["t4", 2]],
+    "dependents": [["t1", ["t2", "t3"]], ["t2", ["t4"]], ["t3", ["t4"]], ["t4", []]],
+    "done": [], "ledger": [], "applied": []
+  },
+  "events": [
+    { "id": 1, "kind": "finish", "task": "t1" },
+    { "id": 2, "kind": "finish", "task": "t2" },
+    { "id": 3, "kind": "finish", "task": "t3" }
+  ]
+}
